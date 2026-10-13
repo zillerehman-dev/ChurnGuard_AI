@@ -1,0 +1,132 @@
+{
+  "model": "XGBoost (scale_pos_weight)",
+  "calibration": "isotonic",
+  "threshold": 0.32,
+  "features": [
+    "Tenure Months",
+    "Monthly Charges",
+    "Total Charges",
+    "Gender",
+    "Senior Citizen",
+    "Partner",
+    "Dependents",
+    "Phone Service",
+    "Multiple Lines",
+    "Internet Service",
+    "Online Security",
+    "Online Backup",
+    "Device Protection",
+    "Tech Support",
+    "Streaming TV",
+    "Streaming Movies",
+    "Contract",
+    "Paperless Billing",
+    "Payment Method"
+  ],
+  "costs": {
+    "loss_cost": 200.0,
+    "offer_cost": 20.0,
+    "offer_success": 0.3
+  },
+  "break_even_probability": 0.3333333333333333,
+  "seed": 42,
+  "sklearn": "1.8.0",
+  "cv_comparison": [
+    {
+      "Model": "XGBoost (scale_pos_weight)",
+      "PR-AUC": 0.6859,
+      "ROC-AUC": 0.8626,
+      "Precision": 0.5369,
+      "Recall": 0.8167,
+      "F1": 0.6479,
+      "TN": 3086,
+      "FP": 1053,
+      "FN": 274,
+      "TP": 1221
+    },
+    {
+      "Model": "XGBoost (SMOTE)",
+      "PR-AUC": 0.6827,
+      "ROC-AUC": 0.8625,
+      "Precision": 0.6042,
+      "Recall": 0.7003,
+      "F1": 0.6487,
+      "TN": 3453,
+      "FP": 686,
+      "FN": 448,
+      "TP": 1047
+    },
+    {
+      "Model": "Random Forest (class weights)",
+      "PR-AUC": 0.6793,
+      "ROC-AUC": 0.8622,
+      "Precision": 0.5584,
+      "Recall": 0.7773,
+      "F1": 0.6499,
+      "TN": 3220,
+      "FP": 919,
+      "FN": 333,
+      "TP": 1162
+    },
+    {
+      "Model": "Logistic Regression (class weights)",
+      "PR-AUC": 0.676,
+      "ROC-AUC": 0.8585,
+      "Precision": 0.5295,
+      "Recall": 0.8094,
+      "F1": 0.6402,
+      "TN": 3064,
+      "FP": 1075,
+      "FN": 285,
+      "TP": 1210
+    },
+    {
+      "Model": "Logistic Regression (SMOTE)",
+      "PR-AUC": 0.6754,
+      "ROC-AUC": 0.8578,
+      "Precision": 0.5417,
+      "Recall": 0.7993,
+      "F1": 0.6458,
+      "TN": 3128,
+      "FP": 1011,
+      "FN": 300,
+      "TP": 1195
+    },
+    {
+      "Model": "Dummy (prior)",
+      "PR-AUC": 0.2653,
+      "ROC-AUC": 0.4999,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1": 0.0,
+      "TN": 4139,
+      "FP": 0,
+      "FN": 1495,
+      "TP": 0
+    }
+  ],
+  "test_at_selected_threshold": {
+    "PR-AUC": 0.6724398916811939,
+    "ROC-AUC": 0.8537613991578186,
+    "Precision": 0.5458089668615984,
+    "Recall": 0.7486631016042781,
+    "F1": 0.6313416009019166,
+    "TN": 802.0,
+    "FP": 233.0,
+    "FN": 94.0,
+    "TP": 280.0
+  },
+  "test_at_0.50": {
+    "PR-AUC": 0.6724398916811939,
+    "ROC-AUC": 0.8537613991578186,
+    "Precision": 0.6816608996539792,
+    "Recall": 0.5267379679144385,
+    "F1": 0.5942684766214178,
+    "TN": 943.0,
+    "FP": 92.0,
+    "FN": 177.0,
+    "TP": 197.0
+  },
+  "n_train": 5634,
+  "n_test": 1409
+}

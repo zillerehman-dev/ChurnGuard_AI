@@ -1,0 +1,5 @@
+policy,customers_contacted,expected_cost,saving_vs_no_offer
+Model @ 0.32,513,68260.0,6540.0
+Model @ 0.50,289,68760.0,6040.0
+Contact everyone,1409,80540.0,-5740.0
+No offers,0,74800.0,0.0
